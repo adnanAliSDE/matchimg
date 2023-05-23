@@ -44,17 +44,10 @@ const initGameBoard = (img_src) => {
   for (let i = 0; i < grid_images.length; i++) {
     const img = `${imgdir}${img_src[i]}`;
     items[i].childNodes[1].src = img;
-    items[i].childNodes[1].src = imgdir + "dummy.png";
   }
 for (let i = 0; i < grid_images.length; i++) {
-
-    const img = `${imgdir}${img_src[i]}`;
-
-    items[i].childNodes[1].src = img;
-
-    items[i].childNodes[1].src = imgdir + "done.png";
-
-  }
+    items[i].childNodes[1].src = imgdir + "dummy.png";
+ }
 };
 initGameBoard(grid_images);
 
