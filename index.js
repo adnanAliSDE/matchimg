@@ -145,9 +145,9 @@ const startGame = (level) => {
       if (score < 40) {
         alert("You lost! Please try again");
         clearInterval(updaterInterval);
-      }
+      }};
       time = time - 1;
-    }
+    
   }, 1000);
 };
 
