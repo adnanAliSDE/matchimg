@@ -113,7 +113,7 @@ const startGame = (level) => {
       time = 45;
       break;
     case "hard":
-      time = 5;
+      time = 30;
       break;
   }
   const updaterInterval = setInterval(() => {
