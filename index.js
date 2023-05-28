@@ -47,8 +47,7 @@ const shuffleImages = (imgList) => {
 };
 
 const startGame = (level = "easy", reset = false) => {
-  // let grid_images = shuffleImages(src_images);
-  let grid_images = src_images;
+  let grid_images = shuffleImages(src_images);
 
   // Checking score
   let activeItems = [];
@@ -108,12 +107,19 @@ const startGame = (level = "easy", reset = false) => {
       }
     });
   });
-  const timeValues = {
-    easy: 60,
-    medium: 45,
-    hard: 10,
-  };
-  let time = timeValues[level];
+
+  let time = 0;
+  switch (level) {
+    case "easy":
+      time = 60;
+      break;
+    case "medium":
+      time = 45;
+      break;
+    case "hard":
+      time = 30;
+      break;
+  }
   const updaterInterval = setInterval(() => {
     const timeElement = document.querySelector(".status .timer");
     const minutes = Math.floor(time / 60);
