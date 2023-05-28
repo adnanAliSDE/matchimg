@@ -47,15 +47,6 @@ const shuffleImages = (imgList) => {
 };
 
 const startGame = (level = "easy", reset = false) => {
-  /*  if (reset) {
-    statusBar.classList.remove("hidden");
-    entriesSection.classList.add("hidden");
-    board.classList.remove("hidden");
-    score = 0;
-    clearInterval(updaterInterval);
-    return;
-  }*/
-  // let grid_images = shuffleImages(src_images);
   let grid_images = src_images;
 
   // Checking score
