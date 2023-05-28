@@ -47,14 +47,6 @@ const shuffleImages = (imgList) => {
 };
 
 const startGame = (level = "easy", reset = false) => {
-  /*  if (reset) {
-    statusBar.classList.remove("hidden");
-    entriesSection.classList.add("hidden");
-    board.classList.remove("hidden");
-    score = 0;
-    clearInterval(updaterInterval);
-    return;
-  }*/
   // let grid_images = shuffleImages(src_images);
   let grid_images = src_images;
 
@@ -74,12 +66,7 @@ const startGame = (level = "easy", reset = false) => {
     if (score === 40) {
       setTimeout(() => {
         alert("Hurray! You Won the Game");
-        statusBar.classList.add("hidden");
-        entriesSection.classList.remove("hidden");
-        board.classList.add("hidden");
-        score = 0;
-        clearInterval(updaterInterval);
-        return;
+        location.reload();
       }, 500);
     }
   };
@@ -124,7 +111,7 @@ const startGame = (level = "easy", reset = false) => {
   const timeValues = {
     easy: 60,
     medium: 45,
-    hard: 30,
+    hard: 10,
   };
   let time = timeValues[level];
   const updaterInterval = setInterval(() => {
@@ -133,18 +120,11 @@ const startGame = (level = "easy", reset = false) => {
     const seconds = time % 60;
     const value = `Time left<b> ${minutes}:${seconds}s</b>`;
     timeElement.innerHTML = value;
-    console.log(time);
     if (time === -1) {
       timeElement.innerHTML = `<p class="text-red-500">Time out</p>`;
       if (score < 40) {
         alert("You lost! Please try again");
-        time = 0;
-        statusBar.classList.remove("hidden");
-        entriesSection.classList.add("hidden");
-        board.classList.remove("hidden");
-        score = 0;
-        clearInterval(updaterInterval);
-        return;
+        location.reload();
       }
     }
     time = time - 1;
