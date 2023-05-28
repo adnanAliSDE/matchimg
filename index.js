@@ -110,7 +110,7 @@ const startGame = (level = "easy", reset = false) => {
 
   let time = 0;
   switch (level) {
-    case "easy":
+    case "easy" || "":
       time = 60;
       break;
     case "medium":
@@ -119,6 +119,8 @@ const startGame = (level = "easy", reset = false) => {
     case "hard":
       time = 30;
       break;
+    default:
+      time = 60;
   }
   const updaterInterval = setInterval(() => {
     const timeElement = document.querySelector(".status .timer");

@@ -6,64 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
     <title>MatchImg.com</title>
+    <!-- <link rel="stylesheet" href="index.css"> -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <!-- <header class="p-4 bg-green-500">
-      <h1 class="text-center font-bold text-3xl">Welcome to MatchImg</h1>
-      <p class="text-gray-100 mt-3 text-center">
-        The image matching game for gamers
-      </p>
-    </header> -->
-    <section class="entries  p-4 bg-green-300">
-      <section class="head">
-        <h1 class="text-3xl text-center">MatchImg</h1>
-        <p class="text-center mt-3 text-gray-700">The Image matching game</p>
-      </section>
-        <!-- <div class="form-group">
-          <label for="username">Username</label>
-          <br />
-          <input
-          id="username"
-            class="border rounded-md p-1 mt-2 w-full"
-            type="text"
-            placeholder="Please enter your account password"
-          />
-        </div>
+    <section class="entries p-4 h-[100vh] bg-green-300">
+      <div class="wrapper mt-52">
+        <section class="head">
+          <h1 class="text-3xl font-bold text-center">MatchImg</h1>
+          <p class="text-center mt-3 mb-5 text-gray-700">The Image matching game for puzzle lovers</p>
+        </section>
         <div class="form-group mt-3">
-          <label for="password">Password</label>
-          <br />
-          <input
-          id="password"
-            class="border rounded-md p-1 mt-2 w-full"
-            type="text"
-            placeholder="Please enter your account password"
-          />
-        </div> -->
-        <div class="form-group mt-3">
-          <label for="level">Choose your level</label>
-          <br />
           <select
-            class="w-full mt-2 p-1 border rounded-md"
-            name="level"
-            id="level"
+          class="w-full mt-2 p-2 border rounded-2xl"
+          name="level"
+          id="level"
           >
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-          </select>
-        </div>
-        <!-- <div class="form-group mt-3">
-          <input type="checkbox" name="new-account" id="new-account" />
-          <label for="new-account">I am a new user</label>
-        </div> -->
-        <button type="submit" class="mt-4 w-full btn text-white bg-green-500 px-2 py-1.5 rounded-md">Play</button>
+          <option value="">Select a level</option>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+      <button type="submit" class="mt-4 w-full rounded-2xl btn text-white bg-green-500 px-2 py-1.5">Play</button>
     </section>
-    <section class="status hidden  m-auto max-w-lg lg:bg-black lg:text-white flex justify-between p-4">
+  </div>
+    <section class="status hidden m-auto max-w-lg lg:bg-black lg:text-white flex justify-between p-4">
       <div class="score">Score: 0/40</div>
       <div class="timer">Time:</div>
     </section>
-    <section class="board  hidden m-auto max-w-lg  grid grid-cols-4 gap-1 ">
+    <section class="board hidden m-auto max-w-lg  grid grid-cols-4 gap-1 ">
       <div class="item active" id="item-1">
         <img src="./images/dummy.png" alt="" />
       </div>
